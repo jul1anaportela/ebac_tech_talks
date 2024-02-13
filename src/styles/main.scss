@@ -1,3 +1,25 @@
-body {
-    background-color: aqua;
+@use 'hero';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family:"Roboto", sans-serif;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+
+    //mobile
+    @media (max-width: 640px) {
+        max-width: 80%;
+    }
+
+    //tablet
+    @media (max-width:1024px) {
+        max-width: 90%;
+    }
 }
