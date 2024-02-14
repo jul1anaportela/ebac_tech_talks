@@ -1,9 +1,31 @@
+@use 'variables';
+
 .event {
     padding: 80px 0;
-    background-image: linear-gradient(#1b6ca7, #442bdb);
+    
+
+    &--frontend {
+        background-image: linear-gradient(variables.$gradientBlue, variables.$gradientPurple);
+    }
+    &--ux-ui {
+        background-image: linear-gradient(variables.$gradientPurple, variables.$gradientRed);
+    }
+    &--data-science {
+        background-image: linear-gradient(variables.$gradientRed, variables.$gradientYellow);
+    }
+    &--backend {
+        background-image: linear-gradient(variables.$gradientYellow, variables.$gradientRed);
+    }
+
+    &--image-left {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
 
     .container {
         display: flex;
+        gap: 40px;
     }
 
     &__image {
@@ -11,8 +33,6 @@
     }
 
     &__details {
-        margin-right: 40px;
-
         &__title {
             font-size: 18px;
             font-weight: bold;
